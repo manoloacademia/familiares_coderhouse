@@ -9,12 +9,11 @@
     <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action active">
             {% if familiares %}
-            {% for familiar in familiares %}
-                <p>Mi {{ familiar.parentezco }} se llama {{ familiar.nombre }}</p>
-                <p>Tiene {{ familiar.edad }} años y nació el día {{ familiar.fecha_nacimiento }}</p>
-                <hr>
-                <br>
-            {% endfor %}
+                {% for familiar in familiares %}
+                    <p>Mi {{ familiar.parentezco }} se llama {{ familiar.nombre }}</p>
+                    <p>Tiene {{ familiar.edad }} años y nació el día {{ familiar.fecha_nacimiento }}</p>
+                    <hr>
+                {% endfor %}
             {% else %}
             <p>Todavía no hay familiares cargados en la base de datos.</p>
             {% endif %}
