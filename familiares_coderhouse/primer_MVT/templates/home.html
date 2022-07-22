@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
     <title>Pablo Segovia: Familiares Coderhouse</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css" integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R" crossorigin="anonymous">
 </head>
 <body>
     <h1>Me llamo Pablo Segovia y esta es mi familia:</h1>
-    {% if familiares %}
-        {% for familiar in familiares %}
-            <p>Mi {{ familiar.parentezco }} se llama {{ familiar.nombre }}</p>
-            <p>Tiene {{ familiar.edad }} años y nació el día {{ familiar.fecha_nacimiento }}</p>
-            <hr>
-        {% endfor %}
-    {% else %}
-        <p>Todavía no hay familiares cargados en la base de datos.</p>
-    {% endif %}
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active">
+            {% if familiares %}
+            {% for familiar in familiares %}
+                <p>Mi {{ familiar.parentezco }} se llama {{ familiar.nombre }}</p>
+                <p>Tiene {{ familiar.edad }} años y nació el día {{ familiar.fecha_nacimiento }}</p>
+                <hr>
+                <br>
+            {% endfor %}
+            {% else %}
+            <p>Todavía no hay familiares cargados en la base de datos.</p>
+            {% endif %}
+        </a>
+    </div>
 </body>
 </html>
