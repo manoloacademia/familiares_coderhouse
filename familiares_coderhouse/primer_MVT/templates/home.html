@@ -4,14 +4,12 @@
     <title>Pablo Segovia: Familiares Coderhouse</title>
 </head>
 <body>
-    <h1>Esta es mi familia</h1>
+    <h1>Me llamo Pablo Segovia y esta es mi familia:</h1>
     {% if familiares %}
         {% for familiar in familiares %}
-        <li>
             <p>Mi {{ familiar.parentezco }} se llama {{ familiar.nombre }}</p>
             <p>Tiene {{ familiar.edad }} años y nació el día {{ familiar.fecha_nacimiento }}</p>
             <hr>
-        </li>
         {% endfor %}
     {% else %}
         <p>Todavía no hay familiares cargados en la base de datos.</p>
